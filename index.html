@@ -1,0 +1,2407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="The Entire Caters - Lucknow ki sabse behtareen luxury catering service. Shaadi, corporate events, parties ke liye 30+ saal ka anubhav.">
+    <meta name="keywords" content="luxury catering, wedding catering, Lucknow catering, premium catering, The Entire Caters, shaadi catering, best caterer lucknow">
+    <title>The Entire Caters | Lucknow Ki Behtareen Catering Service</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    
+
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+
+
+    <style>
+        /* ============================================
+           CUSTOM PROPERTIES
+           ============================================ */
+        :root {
+            --gold: #c9a14a;
+            --gold-light: #d4b66a;
+            --gold-dark: #a8863d;
+            --black-deep: #0b0b0b;
+            --black-soft: #151515;
+            --black-card: #1a1a1a;
+            --white-soft: #f5f5f5;
+        }
+
+        /* ============================================
+           BASE STYLES
+           ============================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--black-deep);
+            color: var(--white-soft);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ============================================
+           TYPOGRAPHY
+           ============================================ */
+        .font-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .font-sans {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Gold Gradient Text */
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #c9a14a 0%, #f0d78c 50%, #c9a14a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Animated Underline */
+        .gold-underline {
+            position: relative;
+            display: inline-block;
+        }
+
+        .gold-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        /* ============================================
+           BUTTONS
+           ============================================ */
+        .btn-gold {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+            color: var(--black-deep);
+            padding: 16px 40px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 13px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-gold::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn-gold:hover::before {
+            left: 100%;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(201, 161, 74, 0.3);
+        }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: transparent;
+            color: var(--gold);
+            padding: 15px 39px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 13px;
+            border: 1px solid var(--gold);
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .btn-outline:hover {
+            background: var(--gold);
+            color: var(--black-deep);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(201, 161, 74, 0.2);
+        }
+
+        /* ============================================
+           PRELOADER
+           ============================================ */
+        .preloader {
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(135deg, #0b0b0b 0%, #151515 100%);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        .preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .preloader-content {
+            text-align: center;
+        }
+
+        .preloader-logo {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+        }
+
+        .preloader-circle {
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+        }
+
+        .preloader-circle-bg {
+            fill: none;
+            stroke: rgba(201, 161, 74, 0.1);
+            stroke-width: 2;
+        }
+
+        .preloader-circle-progress {
+            fill: none;
+            stroke: #c9a14a;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-dasharray: 283;
+            stroke-dashoffset: 283;
+            animation: preloaderProgress 2s ease-in-out forwards;
+        }
+
+        @keyframes preloaderProgress {
+            to { stroke-dashoffset: 0; }
+        }
+
+        .preloader-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #c9a14a;
+            animation: preloaderPulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes preloaderPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .preloader-line {
+            width: 200px;
+            height: 2px;
+            background: rgba(201, 161, 74, 0.1);
+            margin: 0 auto 20px;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .preloader-line-inner {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, #c9a14a, #f0d78c, #c9a14a);
+            animation: preloaderLine 2s ease-in-out forwards;
+        }
+
+        @keyframes preloaderLine {
+            to { width: 100%; }
+        }
+
+        .preloader-tagline {
+            color: rgba(245, 245, 245, 0.6);
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            animation: fadeInUp 1s ease 0.5s forwards;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        @keyframes fadeInUp {
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+
+        /* ============================================
+           SCROLL PROGRESS BAR
+           ============================================ */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #c9a14a, #f0d78c, #c9a14a);
+            background-size: 200% 100%;
+            animation: progressShine 2s linear infinite;
+            z-index: 10001;
+            width: 0%;
+            box-shadow: 0 0 10px rgba(201, 161, 74, 0.5);
+        }
+
+        @keyframes progressShine {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('https://images.unsplash.com/photo-1555244162-803834f70033?w=1920&q=80');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: #1a1a1a;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(11, 11, 11, 0.7) 0%,
+                rgba(11, 11, 11, 0.8) 50%,
+                rgba(11, 11, 11, 0.95) 100%
+            );
+        }
+
+        .hero-pattern {
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 1px 1px, rgba(201, 161, 74, 0.1) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* ============================================
+           NAVBAR
+           ============================================ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: all 0.4s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(11, 11, 11, 0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 15px 0;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-logo-icon {
+            width: 48px;
+            height: 48px;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .nav-logo-icon span {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--gold);
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .nav-logo-text {
+            display: none;
+        }
+
+        @media (min-width: 640px) {
+            .nav-logo-text {
+                display: block;
+            }
+        }
+
+        .nav-logo-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            color: white;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-logo-subtitle {
+            font-size: 10px;
+            color: var(--gold);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: none;
+            align-items: center;
+            gap: 40px;
+        }
+
+        @media (min-width: 1024px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        .nav-link {
+            color: var(--white-soft);
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--gold);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link.active {
+            color: var(--gold);
+        }
+
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: block;
+            background: none;
+            border: none;
+            color: white;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        @media (min-width: 1024px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+
+        /* ============================================
+           MOBILE MENU
+           ============================================ */
+        .mobile-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .mobile-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            max-width: 400px;
+            height: 100vh;
+            height: 100dvh;
+            background: var(--black-deep);
+            z-index: 1001;
+            transition: right 0.4s ease;
+            padding: 100px 40px 40px;
+            overflow-y: auto;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .mobile-menu-links {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .mobile-menu-link {
+            color: white;
+            font-size: 18px;
+            letter-spacing: 2px;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-menu-link:hover {
+            color: var(--gold);
+        }
+
+        /* ============================================
+           SECTIONS
+           ============================================ */
+        section {
+            padding: 80px 0;
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            section {
+                padding: 120px 0;
+            }
+        }
+
+        .section-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-label {
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(32px, 5vw, 56px);
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        /* ============================================
+           SERVICE CARDS
+           ============================================ */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .service-card {
+            background: linear-gradient(145deg, var(--black-card), var(--black-soft));
+            border: 1px solid rgba(201, 161, 74, 0.15);
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(201, 161, 74, 0.4);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 60px rgba(201, 161, 74, 0.1);
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: var(--gold);
+            transition: all 0.4s ease;
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--gold);
+            color: var(--black-deep);
+            transform: scale(1.1);
+        }
+
+        .service-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .service-card p {
+            color: #9ca3af;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* ============================================
+           GALLERY
+           ============================================ */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        @media (min-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            background: var(--black-card);
+        }
+
+        .gallery-item.large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+            min-height: 200px;
+        }
+
+        .gallery-item.large img {
+            min-height: 400px;
+        }
+
+        @media (max-width: 767px) {
+            .gallery-item.large img {
+                min-height: 300px;
+            }
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(11, 11, 11, 0.9) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            color: white;
+        }
+
+        .gallery-overlay p {
+            color: var(--gold);
+            font-size: 12px;
+        }
+
+        /* ============================================
+           ABOUT SECTION
+           ============================================ */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .about-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 64px;
+            }
+        }
+
+        .about-image-wrapper {
+            position: relative;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            background: var(--black-card);
+        }
+
+        @media (min-width: 768px) {
+            .about-image {
+                height: 500px;
+            }
+        }
+
+        .about-image-frame {
+            position: absolute;
+            inset: 0;
+            border: 1px solid var(--gold);
+            transform: translate(16px, 16px);
+            pointer-events: none;
+        }
+
+        @media (min-width: 768px) {
+            .about-image-frame {
+                transform: translate(24px, 24px);
+            }
+        }
+
+        .about-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--gold);
+            color: var(--black-deep);
+            padding: 20px;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .about-badge {
+                bottom: -32px;
+                right: -32px;
+                padding: 24px;
+            }
+        }
+
+        .about-badge-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .about-badge-text {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .about-content p {
+            color: #d1d5db;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .about-signature {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .about-signature-img {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            object-fit: cover;
+            background: var(--black-card);
+        }
+
+        .about-signature-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            color: white;
+        }
+
+        .about-signature-title {
+            color: var(--gold);
+            font-size: 14px;
+        }
+
+        /* ============================================
+           USP SECTION
+           ============================================ */
+        .usp-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        @media (min-width: 768px) {
+            .usp-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .usp-grid {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+
+        .usp-item {
+            text-align: center;
+            padding: 32px 16px;
+            border: 1px solid rgba(201, 161, 74, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .usp-item:hover {
+            background: rgba(201, 161, 74, 0.05);
+            border-color: rgba(201, 161, 74, 0.3);
+        }
+
+        .usp-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--black-deep);
+        }
+
+        .usp-item h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .usp-item p {
+            color: #9ca3af;
+            font-size: 13px;
+        }
+
+        /* ============================================
+           TESTIMONIALS
+           ============================================ */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .testimonial-card {
+            background: linear-gradient(145deg, rgba(26, 26, 26, 0.8), rgba(21, 21, 21, 0.9));
+            border: 1px solid rgba(201, 161, 74, 0.1);
+            padding: 32px;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 100px;
+            color: rgba(201, 161, 74, 0.1);
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            line-height: 1;
+        }
+
+        .testimonial-stars {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-stars svg {
+            width: 18px;
+            height: 18px;
+            color: var(--gold);
+            fill: var(--gold);
+        }
+
+        .testimonial-text {
+            color: #d1d5db;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .testimonial-avatar span {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            color: var(--black-deep);
+            font-weight: 700;
+        }
+
+        .testimonial-name {
+            color: white;
+            font-weight: 500;
+        }
+
+        .testimonial-event {
+            color: var(--gold);
+            font-size: 13px;
+        }
+
+        /* ============================================
+           CTA SECTION
+           ============================================ */
+        .cta-section {
+            position: relative;
+            padding: 100px 0;
+            background-image: url('https://images.unsplash.com/photo-1530062845289-9109b2c9c868?w=1920&q=80');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: #1a1a1a;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(11, 11, 11, 0.95), rgba(11, 11, 11, 0.85));
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+            margin-top: 32px;
+        }
+
+        @media (min-width: 640px) {
+            .cta-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+            margin-top: 48px;
+            padding-top: 48px;
+            border-top: 1px solid #374151;
+        }
+
+        @media (min-width: 768px) {
+            .contact-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .contact-item {
+            text-align: center;
+        }
+
+        .contact-icon {
+            width: 56px;
+            height: 56px;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            color: var(--gold);
+        }
+
+        .contact-label {
+            color: white;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .contact-value {
+            color: #9ca3af;
+            font-size: 14px;
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        footer {
+            background: var(--black-soft);
+            border-top: 1px solid rgba(201, 161, 74, 0.2);
+            padding: 64px 0 32px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 48px;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr;
+            }
+        }
+
+        .footer-brand p {
+            color: #9ca3af;
+            line-height: 1.7;
+            margin: 20px 0;
+            max-width: 400px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-icon {
+            width: 44px;
+            height: 44px;
+            border: 1px solid rgba(201, 161, 74, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background: var(--gold);
+            color: var(--black-deep);
+            transform: translateY(-3px);
+        }
+
+        .footer-links h4,
+        .footer-contact h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            color: white;
+            margin-bottom: 24px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+            color: #9ca3af;
+        }
+
+        .footer-contact-item svg {
+            width: 20px;
+            height: 20px;
+            color: var(--gold);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .footer-bottom {
+            padding-top: 32px;
+            border-top: 1px solid #374151;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+        }
+
+        .footer-bottom p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-bottom-links a {
+            color: #6b7280;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-bottom-links a:hover {
+            color: var(--gold);
+        }
+
+        /* ============================================
+           DECORATIVE ELEMENTS
+           ============================================ */
+        .gold-line {
+            width: 60px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .gold-diamond {
+            width: 8px;
+            height: 8px;
+            background: var(--gold);
+            transform: rotate(45deg);
+        }
+
+        .decorator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        /* Stats */
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+            padding-top: 48px;
+            border-top: 1px solid #374151;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(28px, 5vw, 40px);
+            font-weight: 600;
+        }
+
+        .stat-label {
+            color: #9ca3af;
+            font-size: 13px;
+            margin-top: 4px;
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: #9ca3af;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator span {
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .scroll-line {
+            width: 1px;
+            height: 48px;
+            background: linear-gradient(to bottom, var(--gold), transparent);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(10px); }
+            60% { transform: translateX(-50%) translateY(5px); }
+        }
+
+        /* ============================================
+           ANIMATIONS
+           ============================================ */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-in-left {
+            opacity: 0;
+            transform: translateX(-60px);
+            transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .fade-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .fade-in-right {
+            opacity: 0;
+            transform: translateX(60px);
+            transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .fade-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Glow text animation */
+        .glow-text {
+            animation: textGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes textGlow {
+            0%, 100% {
+                text-shadow: 0 0 20px rgba(201, 161, 74, 0.3), 0 0 40px rgba(201, 161, 74, 0.1);
+            }
+            50% {
+                text-shadow: 0 0 30px rgba(201, 161, 74, 0.5), 0 0 60px rgba(201, 161, 74, 0.2);
+            }
+        }
+
+        /* Floating animation */
+        .float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 10001;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+            padding: 20px;
+        }
+
+        .lightbox.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .lightbox img {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            transform: scale(0.9);
+            transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .lightbox.active img {
+            transform: scale(1);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            cursor: pointer;
+            font-size: 28px;
+            transition: all 0.3s ease;
+        }
+
+        .lightbox-close:hover {
+            background: var(--gold);
+            color: var(--black-deep);
+            transform: rotate(90deg);
+        }
+
+        /* Feature items in cuisine */
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+
+        @media (min-width: 768px) {
+            .features-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 24px;
+        }
+
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            color: var(--gold);
+        }
+
+        .feature-item h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .feature-item p {
+            color: #9ca3af;
+            font-size: 14px;
+        }
+
+        /* Events gallery */
+        .events-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .events-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .events-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .events-grid .gallery-item img {
+            height: 280px;
+        }
+
+        @media (min-width: 768px) {
+            .events-grid .gallery-item img {
+                height: 350px;
+            }
+        }
+
+        /* Particles container */
+        .particles-container {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: radial-gradient(circle, rgba(201, 161, 74, 0.8) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: particleFloat linear infinite;
+            opacity: 0;
+        }
+
+        @keyframes particleFloat {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-100px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ========== PRELOADER ========== -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <svg viewBox="0 0 100 100" class="preloader-circle">
+                    <circle cx="50" cy="50" r="45" class="preloader-circle-bg"/>
+                    <circle cx="50" cy="50" r="45" class="preloader-circle-progress"/>
+                </svg>
+                <span class="preloader-text">TEC</span>
+            </div>
+            <div class="preloader-line">
+                <div class="preloader-line-inner"></div>
+            </div>
+            <p class="preloader-tagline">Swaad Jo Dil Tak Pahunche</p>
+        </div>
+    </div>
+
+    <!-- ========== SCROLL PROGRESS ========== -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ========== PARTICLES CONTAINER ========== -->
+    <div class="particles-container" id="particlesContainer"></div>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="#" class="nav-logo">
+                <div class="nav-logo-icon">
+                    <span>TEC</span>
+                </div>
+                <div class="nav-logo-text">
+                    <div class="nav-logo-title">The Entire Caters</div>
+                    <div class="nav-logo-subtitle">Lucknow</div>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="nav-links">
+                <a href="#about" class="nav-link">Humari Kahani</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#cuisine" class="nav-link">Menu</a>
+                <a href="#events" class="nav-link">Events</a>
+                <a href="#testimonials" class="nav-link">Reviews</a>
+                <a href="#contact" class="btn-gold">Abhi Book Karein</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                <i data-lucide="menu" style="width: 24px; height: 24px;"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="menuClose" aria-label="Close menu">
+            <i data-lucide="x" style="width: 24px; height: 24px;"></i>
+        </button>
+        <div class="mobile-menu-links">
+            <a href="#about" class="mobile-menu-link">Humari Kahani</a>
+            <a href="#services" class="mobile-menu-link">Services</a>
+            <a href="#cuisine" class="mobile-menu-link">Menu</a>
+            <a href="#events" class="mobile-menu-link">Events</a>
+            <a href="#testimonials" class="mobile-menu-link">Reviews</a>
+            <a href="#contact" class="btn-gold" style="margin-top: 16px; text-align: center;">Abhi Book Karein</a>
+        </div>
+    </div>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-pattern"></div>
+        
+        <div class="hero-content">
+            <!-- Decorative Element -->
+            <div class="decorator fade-in">
+                <div class="gold-line"></div>
+                <div class="gold-diamond"></div>
+                <div class="gold-line"></div>
+            </div>
+
+            <!-- Label -->
+            <p class="section-label fade-in">Lucknow Ki Sabse Behtareen Catering Service</p>
+
+            <!-- Main Heading -->
+            <h1 class="section-title fade-in glow-text" style="font-size: clamp(36px, 7vw, 80px); color: white; margin-bottom: 24px;">
+                The Entire Caters<br>
+                <span class="text-gold-gradient">Swaad Aur Shaan</span><br>
+                Ka Sangam
+            </h1>
+
+            <!-- Subheading -->
+            <p class="fade-in" style="color: #d1d5db; font-size: clamp(16px, 2.5vw, 20px); max-width: 600px; margin: 0 auto 40px; font-weight: 300; line-height: 1.8;">
+                Shaadi ho ya party, corporate event ho ya private celebration — 
+                hum laate hain 30+ saal ka anubhav aur dil se bana khana. 
+                Lucknow ka asli swaad, aapki mehfil mein!
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="fade-in" style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
+                <a href="#contact" class="btn-gold">Abhi Book Karein</a>
+                <a href="#services" class="btn-outline">Humari Services Dekhein</a>
+            </div>
+
+            <!-- Stats -->
+            <div class="hero-stats fade-in">
+                <div>
+                    <div class="stat-number text-gold-gradient" data-count="30">0</div>
+                    <div class="stat-label">Saal Ka Anubhav</div>
+                </div>
+                <div>
+                    <div class="stat-number text-gold-gradient" data-count="40">0</div>
+                    <div class="stat-label">Safal Events</div>
+                </div>
+                <div>
+                    <div class="stat-number text-gold-gradient" data-count="100">0</div>
+                    <div class="stat-label">Khush Customers</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span>Scroll Karein</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <section id="about" style="background: var(--black-deep);">
+        <div class="section-container">
+            <div class="about-grid">
+                <!-- Image Side -->
+                <div class="about-image-wrapper fade-in-left">
+                    <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&q=80" 
+                         alt="Chef preparing food" 
+                         class="about-image"
+                         loading="lazy"
+                         onerror="this.src='https://placehold.co/800x600/1a1a1a/c9a14a?text=Chef+at+Work'">
+                    <div class="about-image-frame"></div>
+                    
+                    <!-- Experience Badge -->
+                    <div class="about-badge">
+                        <div class="about-badge-number">30+</div>
+                        <div class="about-badge-text">Saal Ka<br>Anubhav</div>
+                    </div>
+                </div>
+
+                <!-- Content Side -->
+                <div class="fade-in-right">
+                    <p class="section-label">Humari Kahani</p>
+                    <h2 class="section-title" style="color: white;">
+                        Ek Virasat,<br>
+                        <span class="text-gold-gradient">Teen Peedhiyon Ka Swaad</span>
+                    </h2>
+                    
+                    <div class="about-content">
+                        <p>
+                            <strong style="color: white;">The Entire Caters</strong> sirf ek catering service nahi hai — 
+                            yeh ek parivaar ki mehnat aur junoon ki kahani hai. Humari shuruaat 
+                            <strong style="color: var(--gold);">Harsh Kashyap</strong> ne ki, jo ek trained commis chef 
+                            hain aur jinhone chhote-bade events mein apna hunar dikhaya hai.
+                        </p>
+                        
+                        <p>
+                            Harsh ke pita, <strong style="color: var(--gold);">Chef Raju Kashyap</strong>, 
+                            <strong style="color: white;">30+ saal se</strong> bade-bade hotels aur restaurants mein 
+                            kaam kar chuke hain. Unka anubhav aur Harsh ka naya nazariya — yahi hai humari taakat. 
+                            Har dish mein aapko milega asli Lucknowi swaad aur modern presentation.
+                        </p>
+
+                        <p>
+                            Chahe chhoti gathering ho ya badi shaadi, hum har event ko apna samajhte hain. 
+                            Aapka bharosa humari zimmedari hai!
+                        </p>
+                    </div>
+
+                    <!-- Signature -->
+                    <div class="about-signature">
+                        <img src="https://i.ibb.co/jkMVZRZY/Picture1.jpg>" 
+                             alt="Chef Harsh Kashyap" 
+                             class="about-signature-img"
+                             loading="lazy"
+                             onerror="this.src='https://placehold.co/100x100/c9a14a/0b0b0b?text=HK'">
+                        <div>
+                            <div class="about-signature-name">Harsh Kashyap</div>
+                            <div class="about-signature-title">Founder & Head Chef</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICES SECTION ========== -->
+    <section id="services" style="background: var(--black-soft);">
+        <div class="section-container">
+            <!-- Section Header -->
+            <div class="section-header fade-in">
+                <p class="section-label">Humari Services</p>
+                <h2 class="section-title gold-underline" style="color: white;">
+                    Har Mauke Ke Liye Catering
+                </h2>
+                <p style="color: #9ca3af; margin-top: 32px;">
+                    Chhoti mehfil ho ya bada jashn — har event ke liye hum ready hain. 
+                    Quality khana, shandar presentation, aur on-time service ki guarantee!
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i data-lucide="heart" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3>Shaadi Catering</h3>
+                    <p>
+                        Shaadi ho toh aisi ho ki log yaad rakhein! Haldi se lekar reception tak, 
+                        har function ke liye special menu. Traditional Lucknowi swaad jo mehmaanon 
+                        ke dil jeet le. Baaraat ka swagat ho ya bidaai ka khana — sab perfect!
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i data-lucide="party-popper" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3>Party & Celebration</h3>
+                    <p>
+                        Birthday party ho, anniversary ho ya koi bhi khushi ka mauka — 
+                        hum laate hain tasty khana aur zabardast service. Aapke budget mein 
+                        best quality ka promise! Choti party ho ya badi — tension mat lo.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i data-lucide="briefcase" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3>Corporate Events</h3>
+                    <p>
+                        Office party ho, client meeting ho ya annual function — professional 
+                        catering jo aapki company ki image badhaye. Hygienic food, elegant 
+                        presentation aur timely service. Aapke boss bhi khush, clients bhi!
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i data-lucide="clipboard-list" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3>Custom Menu Planning</h3>
+                    <p>
+                        Aapki pasand, aapka budget — humara kaam hai aapko best menu banana. 
+                        Veg, non-veg, Jain food, diet special — sab available! 
+                        Bataiye kya chahiye, hum bana denge bilkul waisa.
+                    </p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i data-lucide="flame" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3>Live Counters</h3>
+                    <p>
+                        Mehmaanon ke saamne garam-garam khana bane — yahi asli maza hai! 
+                        Dosa counter, chaat corner, tandoor live — sab available. 
+                        Entertainment bhi, tasty khana bhi. Double dhamaal!
+                    </p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i data-lucide="utensils" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3>Traditional Lucknowi Khana</h3>
+                    <p>
+                        Lucknow ka naam suna hai toh swaad bhi jaana hoga! Galouti kebab, 
+                        biryani, korma, sheermal — asli nawabi zayka. Purani recipes, 
+                        naye andaaz mein. Ek baar khaya, hamesha yaad rahega!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SIGNATURE CUISINE SECTION ========== -->
+    <section id="cuisine" style="background: var(--black-deep);">
+        <div class="section-container">
+            <!-- Section Header -->
+            <div class="section-header fade-in">
+                <p class="section-label">Humara Khaana</p>
+                <h2 class="section-title gold-underline" style="color: white;">
+                    Swaad Jo Yaad Rahe Hamesha
+                </h2>
+                <p style="color: #9ca3af; margin-top: 32px;">
+                    Fresh ingredients, traditional recipes, modern presentation. 
+                    FSSAI approved kitchen, hygienic cooking, aur dil se banaya khana. 
+                    Ek baar try karo, phir dekhna — repeat order pakka!
+                </p>
+            </div>
+
+            <!-- Features -->
+            <div class="features-grid">
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">
+                        <i data-lucide="leaf" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3>Asli Swaad</h3>
+                    <p>Purane recipes, naye andaaz mein</p>
+                </div>
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">
+                        <i data-lucide="award" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3>Beautiful Presentation</h3>
+                    <p>Photo-worthy khana jo dekhne mein bhi lajawab</p>
+                </div>
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">
+                        <i data-lucide="shield-check" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3>100% Hygienic</h3>
+                    <p>FSSAI approved, clean kitchen, safe food</p>
+                </div>
+            </div>
+
+            <!-- Food Gallery -->
+            <div class="gallery-grid">
+                <div class="gallery-item large fade-in scale-in">
+                    <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=800&q=80" 
+                         alt="Luxury Indian cuisine"
+                         loading="lazy"
+                         onerror="this.src='https://placehold.co/800x600/1a1a1a/c9a14a?text=Lucknowi+Biryani'">
+                    <div class="gallery-overlay">
+                        <div>
+                            <h4>Lucknowi Biryani</h4>
+                            <p>Humari Specialty</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in scale-in">
+                    <img src="https://images.unsplash.com/photo-1615557960916-5f4791effe9d?w=600&q=80" 
+                         alt="Traditional Indian curry"
+                         loading="lazy"
+                         onerror="this.src='https://placehold.co/400x300/1a1a1a/c9a14a?text=Butter+Chicken'">
+                    <div class="gallery-overlay">
+                        <h4>Butter Chicken</h4>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in scale-in">
+                    <img src="https://images.unsplash.com/photo-1593701461250-d7b22dfd3a77?w=600&q=80" 
+                         alt="Indian sweets"
+                         loading="lazy"
+                         onerror="this.src='https://placehold.co/400x300/1a1a1a/c9a14a?text=Gulab+Jamun'">
+                    <div class="gallery-overlay">
+                        <h4>Gulab Jamun</h4>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in scale-in">
+                    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80" 
+                         alt="Samosas"
+                         loading="lazy"
+                         onerror="this.src='https://placehold.co/400x300/1a1a1a/c9a14a?text=Crispy+Samose'">
+                    <div class="gallery-overlay">
+                        <h4>Crispy Samose</h4>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in scale-in">
+                    <img src="https://images.unsplash.com/photo-1520252729650-ddced2015543?w=600&q=80" 
+                         alt="Tandoori platter"
+                         loading="lazy"
+                         onerror="this.src='https://placehold.co/400x300/1a1a1a/c9a14a?text=Tandoori+Kebab'">
+                    <div class="gallery-overlay">
+                        <h4>Tandoori Kebab</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+<!-- ========== EXPLORE MENU SECTION ========== -->
+<section id="menu-section" style="background: linear-gradient(135deg, var(--black-soft) 0%, var(--black-deep) 100%); position: relative; overflow: hidden;">
+    <!-- Background Pattern -->
+    <div style="position: absolute; inset: 0; background-image: radial-gradient(circle at 1px 1px, rgba(201, 161, 74, 0.05) 1px, transparent 0); background-size: 40px 40px; pointer-events: none;"></div>
+    
+    <div class="section-container" style="position: relative; z-index: 1;">
+        <div class="section-header fade-in" style="max-width: 900px;">
+            <!-- Decorative Element -->
+            <div class="decorator">
+                <div class="gold-line"></div>
+                <div class="gold-diamond"></div>
+                <div class="gold-line"></div>
+            </div>
+            
+            <p class="section-label">Humara Full Menu</p>
+            <h2 class="section-title gold-underline" style="color: white;">
+                Dekhein Humara <span class="text-gold-gradient">Complete Menu</span>
+            </h2>
+            <p style="color: #9ca3af; margin-top: 32px; font-size: 17px; line-height: 1.8;">
+                Veg, Non-Veg, Starters, Main Course, Desserts, Live Counters — 
+                sab kuch ek jagah! Humara detailed menu dekhein aur apne event ke liye 
+                best dishes chunein. Har budget mein options available hain!
+            </p>
+            
+            <!-- Menu Features -->
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; margin-top: 40px; margin-bottom: 40px;">
+                <div style="display: flex; align-items: center; gap: 8px; color: var(--gold);">
+                    <i data-lucide="check-circle" style="width: 20px; height: 20px;"></i>
+                    <span style="font-size: 14px; color: #d1d5db;">100+ Dishes</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; color: var(--gold);">
+                    <i data-lucide="check-circle" style="width: 20px; height: 20px;"></i>
+                    <span style="font-size: 14px; color: #d1d5db;">Veg & Non-Veg</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; color: var(--gold);">
+                    <i data-lucide="check-circle" style="width: 20px; height: 20px;"></i>
+                    <span style="font-size: 14px; color: #d1d5db;">Custom Packages</span>
+                </div>
+            </div>
+            
+            <!-- Menu Button -->
+            <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
+                <a href="menu.html" class="btn-gold" style="padding: 18px 50px; font-size: 14px;">
+                    <i data-lucide="book-open" style="width: 18px; height: 18px;"></i>
+                    Poora Menu Dekhein
+                </a>
+                <a href="#contact" class="btn-outline" style="padding: 17px 40px; font-size: 14px;">
+                    <i data-lucide="phone" style="width: 18px; height: 18px;"></i>
+                    Quote Maangein
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+    <!-- ========== WHY CHOOSE US SECTION ========== -->
+    <section style="background: var(--black-soft);">
+        <div class="section-container">
+            <!-- Section Header -->
+            <div class="section-header fade-in">
+                <p class="section-label">Humein Kyun Chunein?</p>
+                <h2 class="section-title gold-underline" style="color: white;">
+                    The Entire Caters Ka Fark
+                </h2>
+            </div>
+
+            <!-- USP Grid -->
+            <div class="usp-grid">
+                <div class="usp-item fade-in scale-in">
+                    <div class="usp-icon">
+                        <i data-lucide="crown" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3>30+ Saal</h3>
+                    <p>Ka Bharosemand Anubhav</p>
+                </div>
+                <div class="usp-item fade-in scale-in">
+                    <div class="usp-icon">
+                        <i data-lucide="chef-hat" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3>Expert Chefs</h3>
+                    <p>Trained & Professional Team</p>
+                </div>
+                <div class="usp-item fade-in scale-in">
+                    <div class="usp-icon">
+                        <i data-lucide="gem" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3>Premium Quality</h3>
+                    <p>Fresh Ingredients Hamesha</p>
+                </div>
+                <div class="usp-item fade-in scale-in">
+                    <div class="usp-icon">
+                        <i data-lucide="scroll-text" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3>Custom Menu</h3>
+                    <p>Aapki Pasand Ka Khana</p>
+                </div>
+                <div class="usp-item fade-in scale-in">
+                    <div class="usp-icon">
+                        <i data-lucide="clock" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3>On-Time</h3>
+                    <p>Punctual Service Guaranteed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EVENTS SHOWCASE SECTION ========== -->
+    <section id="events" style="background: var(--black-deep);">
+        <div class="section-container">
+            <!-- Section Header -->
+            <div class="section-header fade-in">
+                <p class="section-label">Humare Events</p>
+                <h2 class="section-title gold-underline" style="color: white;">
+                    Khushiyon Ka Collection
+                </h2>
+                <p style="color: #9ca3af; margin-top: 32px;">
+                    Bade-bade shaadi events se lekar intimate family gatherings tak — 
+                    dekho humne kaise har mauke ko special banaya!
+                </p>
+            </div>
+
+            <!-- Events Gallery -->
+            <div class="events-grid">
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80" 
+                         alt="Wedding catering setup"
+                         loading="lazy"
+                         onerror="this.src='https://placehold.co/600x400/1a1a1a/c9a14a?text=Shaadi+Setup'">
+                    <div class="gallery-overlay">
+                        <div>
+                            <h4>Grand Shaadi</h4>
+                            <p>Shahi Setup & Decor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80" 
+                         alt="Fine dining setup"
+                         loading="lazy"
+                         onerror="this.src='https://placehold.co/600x400/1a1a1a/c9a14a?text=Luxury+Dining'">
+                    <div class="gallery-overlay">
+                        <div>
+                            <h4>Premium Dining</h4>
+                            <p>VIP Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&q=80" 
+                         alt="Party celebration"
+                         loading="lazy"
+                         onerror="this.src='https://placehold.co/600x400/1a1a1a/c9a14a?text=Birthday+Party'">
+                    <div class="gallery-overlay">
+                        <div>
+                            <h4>Birthday & Parties</h4>
+                            <p>Fun Celebrations</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=600&q=80" 
+                         alt="Buffet spread"
+                         loading="lazy"
+                         onerror="this.src='https://placehold.co/600x400/1a1a1a/c9a14a?text=Grand+Buffet'">
+                    <div class="gallery-overlay">
+                        <div>
+                            <h4>Grand Buffet</h4>
+                            <p>100+ Items Available</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" 
+                         alt="Corporate event"
+                         loading="lazy"
+                         onerror="this.src='https://placehold.co/600x400/1a1a1a/c9a14a?text=Corporate+Event'">
+                    <div class="gallery-overlay">
+                        <div>
+                            <h4>Corporate Events</h4>
+                            <p>Professional Catering</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?w=600&q=80" 
+                         alt="Outdoor catering"
+                         loading="lazy"
+                         onerror="this.src='https://placehold.co/600x400/1a1a1a/c9a14a?text=Outdoor+Event'">
+                    <div class="gallery-overlay">
+                        <div>
+                            <h4>Outdoor Mehfil</h4>
+                            <p>Open-Air Setup</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS SECTION ========== -->
+    <section id="testimonials" style="background: var(--black-soft);">
+        <div class="section-container">
+            <!-- Section Header -->
+            <div class="section-header fade-in">
+                <p class="section-label">Customer Reviews</p>
+                <h2 class="section-title gold-underline" style="color: white;">
+                    Humare Khush Customers
+                </h2>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Humari beti ki shaadi mein The Entire Caters ne kamaal kar diya! 
+                        Khana itna tasty tha ki mehman abhi tak yaad karte hain. Biryani aur 
+                        kebab toh lajawab the! Bilkul time pe service mili. 
+                        Bahut bahut shukriya Harsh bhai aur team ko!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <span>RG</span>
+                        </div>
+                        <div>
+                            <div class="testimonial-name">Rajesh Gupta</div>
+                            <div class="testimonial-event">Shaadi, December 2024</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Office ki annual party ke liye book kiya tha — boss bhi khush, 
+                        clients bhi impress! Live counters ne toh dhoom macha di. 
+                        Sab kuch ekdum professional aur tasty. Agli baar bhi yahi caterer 
+                        book karenge. Highly recommended hai yaar!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <span>PS</span>
+                        </div>
+                        <div>
+                            <div class="testimonial-name">Priya Srivastava</div>
+                            <div class="testimonial-event">Corporate Event, November 2024</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Mummy-Papa ki 25th anniversary pe surprise party rakhi thi. 
+                        Budget kam tha lekin TEC ne itna achha khana diya ki sab shocked the! 
+                        Quality mein koi compromise nahi. Thank you TEC team — 
+                        aap logo ne din bana diya!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <span>AK</span>
+                        </div>
+                        <div>
+                            <div class="testimonial-name">Amit Kumar</div>
+                            <div class="testimonial-event">Anniversary Party, October 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA SECTION ========== -->
+    <section id="contact" class="cta-section">
+        <div class="cta-content">
+            <!-- Decorative Element -->
+            <div class="decorator fade-in">
+                <div class="gold-line"></div>
+                <div class="gold-diamond"></div>
+                <div class="gold-line"></div>
+            </div>
+
+            <p class="section-label fade-in">Abhi Sampark Karein</p>
+            <h2 class="section-title fade-in" style="font-size: clamp(32px, 5vw, 56px); color: white;">
+                Aapka Event,<br>
+                <span class="text-gold-gradient">Humari Zimmedari</span>
+            </h2>
+            <p class="fade-in" style="color: #d1d5db; font-size: 18px; max-width: 600px; margin: 0 auto;">
+                Shaadi ho, party ho ya koi bhi event — abhi call karein ya message bhejein. 
+                Free consultation aur best quote milega! Lucknow mein sabse saste rate, 
+                sabse achhi quality — yahi hai humara promise.
+            </p>
+
+            <div class="cta-buttons fade-in">
+                <a href="tel:+919369725474" class="btn-gold">
+                    <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+                    Abhi Call Karein
+                </a>
+                <a href="mailto:theentirecaters@gmail.com" class="btn-outline">
+                    <i data-lucide="mail" style="width: 16px; height: 16px;"></i>
+                    Email Bhejein
+                </a>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact-grid fade-in">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i data-lucide="phone" style="width: 24px; height: 24px;"></i>
+                    </div>
+                    <div class="contact-label">Phone Number</div>
+                    <div class="contact-value">+91 93697 25474</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i data-lucide="mail" style="width: 24px; height: 24px;"></i>
+                    </div>
+                    <div class="contact-label">Email Address</div>
+                    <div class="contact-value">theentirecaters@gmail.com</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i data-lucide="map-pin" style="width: 24px; height: 24px;"></i>
+                    </div>
+                    <div class="contact-label">Humara Location</div>
+                    <div class="contact-value">Lucknow, Uttar Pradesh</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="section-container">
+            <div class="footer-grid">
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <div class="nav-logo">
+                        <div class="nav-logo-icon" style="width: 56px; height: 56px;">
+                            <span style="font-size: 22px;">TEC</span>
+                        </div>
+                        <div class="nav-logo-text" style="display: block;">
+                            <div class="nav-logo-title" style="font-size: 24px;">The Entire Caters</div>
+                            <div class="nav-logo-subtitle">Premium Catering</div>
+                        </div>
+                    </div>
+                    <p>
+                        30+ saal ka anubhav, dil se bana khana, aur aapki khushi — 
+                        yahi hai humara mission. Lucknow ki sabse trusted catering service. 
+                        Ek baar try karein, hamesha yaad rakhenge!
+                    </p>
+                    <!-- Social Icons -->
+                    <div class="social-links">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <i data-lucide="facebook" style="width: 20px; height: 20px;"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <i data-lucide="instagram" style="width: 20px; height: 20px;"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <i data-lucide="twitter" style="width: 20px; height: 20px;"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="YouTube">
+                            <i data-lucide="youtube" style="width: 20px; height: 20px;"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">Humari Kahani</a></li>
+                        <li><a href="#services">Humari Services</a></li>
+                        <li><a href="#cuisine">Menu Gallery</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#testimonials">Customer Reviews</a></li>
+                        <li><a href="prvcplc.html">Privacy Policy</a></li>
+                        <li><a href="trmsrvc.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-contact">
+                    <h4>Sampark Karein</h4>
+                    <div class="footer-contact-item">
+                        <i data-lucide="map-pin"></i>
+                        <span>Lucknow, Uttar Pradesh<br>India</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i data-lucide="phone"></i>
+                        <a href="tel:+919369725474">+91 93697 25474</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i data-lucide="mail"></i>
+                        <a href="mailto:theentirecaters@gmail.com">theentirecaters@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <p>© 2025 The Entire Caters. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="prvcplc.html">Privacy Policy</a>
+                    <a href="trmsrvc.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== LIGHTBOX ========== -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">&times;</button>
+        <img src="" alt="Gallery image" id="lightboxImg">
+    </div>
+
+    <!-- ========== EXTERNAL JAVASCRIPT ========== -->
+    <script src="script.js"></script>
+</body>
+</html>

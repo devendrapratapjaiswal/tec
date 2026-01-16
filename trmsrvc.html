@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="The Entire Caters - Terms of Service. Humari catering service ke niyam aur shart padhein.">
+    <meta name="keywords" content="terms of service, catering terms, The Entire Caters, Lucknow catering terms">
+    <title>Terms of Service | The Entire Caters - Lucknow</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <style>
+        /* ============================================
+           CUSTOM PROPERTIES
+           ============================================ */
+        :root {
+            --gold: #c9a14a;
+            --gold-light: #d4b66a;
+            --gold-dark: #a8863d;
+            --black-deep: #0b0b0b;
+            --black-soft: #151515;
+            --black-card: #1a1a1a;
+            --white-soft: #f5f5f5;
+        }
+
+        /* ============================================
+           BASE STYLES
+           ============================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--black-deep);
+            color: var(--white-soft);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ============================================
+           TYPOGRAPHY
+           ============================================ */
+        .font-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .font-sans {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Gold Gradient Text */
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #c9a14a 0%, #f0d78c 50%, #c9a14a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Animated Underline */
+        .gold-underline {
+            position: relative;
+            display: inline-block;
+        }
+
+        .gold-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        /* ============================================
+           BUTTONS
+           ============================================ */
+        .btn-gold {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+            color: var(--black-deep);
+            padding: 16px 40px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 13px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-gold::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn-gold:hover::before {
+            left: 100%;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(201, 161, 74, 0.3);
+        }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: transparent;
+            color: var(--gold);
+            padding: 15px 39px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 13px;
+            border: 1px solid var(--gold);
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .btn-outline:hover {
+            background: var(--gold);
+            color: var(--black-deep);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(201, 161, 74, 0.2);
+        }
+
+        /* ============================================
+           SCROLL PROGRESS BAR
+           ============================================ */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #c9a14a, #f0d78c, #c9a14a);
+            background-size: 200% 100%;
+            animation: progressShine 2s linear infinite;
+            z-index: 10001;
+            width: 0%;
+            box-shadow: 0 0 10px rgba(201, 161, 74, 0.5);
+        }
+
+        @keyframes progressShine {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* ============================================
+           NAVBAR
+           ============================================ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: all 0.4s ease;
+            background: rgba(11, 11, 11, 0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-logo-icon {
+            width: 48px;
+            height: 48px;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .nav-logo-icon span {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--gold);
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .nav-logo-text {
+            display: none;
+        }
+
+        @media (min-width: 640px) {
+            .nav-logo-text {
+                display: block;
+            }
+        }
+
+        .nav-logo-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            color: white;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-logo-subtitle {
+            font-size: 10px;
+            color: var(--gold);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: none;
+            align-items: center;
+            gap: 40px;
+        }
+
+        @media (min-width: 1024px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        .nav-link {
+            color: var(--white-soft);
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--gold);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: block;
+            background: none;
+            border: none;
+            color: white;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        @media (min-width: 1024px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+
+        /* ============================================
+           MOBILE MENU
+           ============================================ */
+        .mobile-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .mobile-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            max-width: 400px;
+            height: 100vh;
+            height: 100dvh;
+            background: var(--black-deep);
+            z-index: 1001;
+            transition: right 0.4s ease;
+            padding: 100px 40px 40px;
+            overflow-y: auto;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .mobile-menu-links {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .mobile-menu-link {
+            color: white;
+            font-size: 18px;
+            letter-spacing: 2px;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-menu-link:hover {
+            color: var(--gold);
+        }
+
+        /* ============================================
+           PAGE HEADER
+           ============================================ */
+        .page-header {
+            padding: 160px 0 80px;
+            position: relative;
+            background: linear-gradient(135deg, var(--black-deep) 0%, var(--black-soft) 100%);
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 1px 1px, rgba(201, 161, 74, 0.1) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ============================================
+           TERMS CONTENT
+           ============================================ */
+        .terms-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        .terms-section {
+            margin-bottom: 48px;
+            padding: 32px;
+            background: linear-gradient(145deg, var(--black-card), var(--black-soft));
+            border: 1px solid rgba(201, 161, 74, 0.15);
+            transition: all 0.4s ease;
+        }
+
+        .terms-section:hover {
+            border-color: rgba(201, 161, 74, 0.4);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .terms-section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--black-deep);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 50%;
+            margin-bottom: 16px;
+        }
+
+        .terms-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(24px, 4vw, 32px);
+            color: white;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .terms-section h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            color: var(--gold);
+            margin: 24px 0 12px;
+        }
+
+        .terms-section p {
+            color: #d1d5db;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .terms-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 16px 0;
+        }
+
+        .terms-section li {
+            color: #d1d5db;
+            padding: 12px 0 12px 32px;
+            position: relative;
+            border-bottom: 1px solid rgba(201, 161, 74, 0.1);
+        }
+
+        .terms-section li:last-child {
+            border-bottom: none;
+        }
+
+        .terms-section li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background: var(--gold);
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        .terms-section strong {
+            color: white;
+        }
+
+        .terms-section .highlight {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .terms-icon {
+            width: 28px;
+            height: 28px;
+            color: var(--gold);
+            flex-shrink: 0;
+        }
+
+        /* Last Updated Box */
+        .last-updated {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(201, 161, 74, 0.1);
+            border: 1px solid rgba(201, 161, 74, 0.3);
+            padding: 12px 24px;
+            margin-top: 20px;
+            font-size: 14px;
+            color: var(--gold);
+        }
+
+        /* Contact Box */
+        .contact-box {
+            background: linear-gradient(135deg, rgba(201, 161, 74, 0.1), rgba(201, 161, 74, 0.05));
+            border: 1px solid var(--gold);
+            padding: 32px;
+            text-align: center;
+            margin-top: 48px;
+        }
+
+        .contact-box h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .contact-box p {
+            color: #d1d5db;
+            margin-bottom: 24px;
+        }
+
+        .contact-info-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        @media (min-width: 640px) {
+            .contact-info-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-info-item svg {
+            color: var(--gold);
+            width: 20px;
+            height: 20px;
+        }
+
+        .contact-info-item span {
+            color: #d1d5db;
+        }
+
+        .contact-info-item a {
+            color: var(--gold);
+            transition: color 0.3s ease;
+        }
+
+        .contact-info-item a:hover {
+            color: var(--gold-light);
+        }
+
+        /* ============================================
+           DECORATIVE ELEMENTS
+           ============================================ */
+        .gold-line {
+            width: 60px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .gold-diamond {
+            width: 8px;
+            height: 8px;
+            background: var(--gold);
+            transform: rotate(45deg);
+        }
+
+        .decorator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .section-label {
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        footer {
+            background: var(--black-soft);
+            border-top: 1px solid rgba(201, 161, 74, 0.2);
+            padding: 64px 0 32px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 48px;
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 24px;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr;
+            }
+        }
+
+        .footer-brand p {
+            color: #9ca3af;
+            line-height: 1.7;
+            margin: 20px 0;
+            max-width: 400px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-icon {
+            width: 44px;
+            height: 44px;
+            border: 1px solid rgba(201, 161, 74, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background: var(--gold);
+            color: var(--black-deep);
+            transform: translateY(-3px);
+        }
+
+        .footer-links h4,
+        .footer-contact h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            color: white;
+            margin-bottom: 24px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+            color: #9ca3af;
+        }
+
+        .footer-contact-item svg {
+            width: 20px;
+            height: 20px;
+            color: var(--gold);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .footer-bottom {
+            padding-top: 32px;
+            border-top: 1px solid #374151;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+            text-align: center;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+        }
+
+        .footer-bottom p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-bottom-links a {
+            color: #6b7280;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-bottom-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom-links a.active {
+            color: var(--gold);
+        }
+
+        /* ============================================
+           TABLE OF CONTENTS
+           ============================================ */
+        .toc {
+            background: linear-gradient(145deg, var(--black-card), var(--black-soft));
+            border: 1px solid rgba(201, 161, 74, 0.3);
+            padding: 32px;
+            margin-bottom: 48px;
+        }
+
+        .toc h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            color: white;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+        }
+
+        @media (min-width: 640px) {
+            .toc-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .toc-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            color: #d1d5db;
+            transition: all 0.3s ease;
+            border-left: 2px solid transparent;
+        }
+
+        .toc-link:hover {
+            color: var(--gold);
+            background: rgba(201, 161, 74, 0.05);
+            border-left-color: var(--gold);
+        }
+
+        .toc-link span {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(201, 161, 74, 0.2);
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 4px;
+        }
+
+        /* ============================================
+           ANIMATIONS
+           ============================================ */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--black-deep);
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+            z-index: 999;
+            box-shadow: 0 5px 20px rgba(201, 161, 74, 0.3);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(201, 161, 74, 0.4);
+        }
+
+        /* Important Notice Box */
+        .important-notice {
+            background: linear-gradient(135deg, rgba(201, 161, 74, 0.15), rgba(201, 161, 74, 0.05));
+            border-left: 4px solid var(--gold);
+            padding: 20px 24px;
+            margin: 24px 0;
+        }
+
+        .important-notice p {
+            margin: 0;
+            color: #d1d5db;
+        }
+
+        .important-notice strong {
+            color: var(--gold);
+        }
+    </style>
+</head>
+<body>
+    <!-- ========== SCROLL PROGRESS ========== -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="index.html" class="nav-logo">
+                <div class="nav-logo-icon">
+                    <span>TEC</span>
+                </div>
+                <div class="nav-logo-text">
+                    <div class="nav-logo-title">The Entire Caters</div>
+                    <div class="nav-logo-subtitle">Lucknow</div>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="nav-links">
+                <a href="index.html#about" class="nav-link">Humari Kahani</a>
+                <a href="index.html#services" class="nav-link">Services</a>
+                <a href="index.html#cuisine" class="nav-link">Menu</a>
+                <a href="index.html#events" class="nav-link">Events</a>
+                <a href="index.html#contact" class="btn-gold">Abhi Book Karein</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                <i data-lucide="menu" style="width: 24px; height: 24px;"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="menuClose" aria-label="Close menu">
+            <i data-lucide="x" style="width: 24px; height: 24px;"></i>
+        </button>
+        <div class="mobile-menu-links">
+            <a href="index.html" class="mobile-menu-link">Home</a>
+            <a href="index.html#about" class="mobile-menu-link">Humari Kahani</a>
+            <a href="index.html#services" class="mobile-menu-link">Services</a>
+            <a href="index.html#cuisine" class="mobile-menu-link">Menu</a>
+            <a href="index.html#events" class="mobile-menu-link">Events</a>
+            <a href="index.html#contact" class="btn-gold" style="margin-top: 16px; text-align: center;">Abhi Book Karein</a>
+        </div>
+    </div>
+
+    <!-- ========== PAGE HEADER ========== -->
+    <header class="page-header">
+        <div class="page-header-content">
+            <!-- Decorative Element -->
+            <div class="decorator fade-in">
+                <div class="gold-line"></div>
+                <div class="gold-diamond"></div>
+                <div class="gold-line"></div>
+            </div>
+
+            <p class="section-label fade-in">Legal Information</p>
+            <h1 class="section-title fade-in" style="color: white;">
+                Terms of <span class="text-gold-gradient">Service</span>
+            </h1>
+            <p class="fade-in" style="color: #9ca3af; font-size: 16px; max-width: 600px; margin: 0 auto;">
+                The Entire Caters ki catering services use karne se pehle yeh terms zaroor padhein. 
+                Aapka bharosa humari zimmedari hai!
+            </p>
+
+            <div class="last-updated fade-in">
+                <i data-lucide="calendar" style="width: 16px; height: 16px;"></i>
+                <span>Last Updated: January 2025</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== TERMS CONTENT ========== -->
+    <main class="terms-container">
+        
+        <!-- Table of Contents -->
+        <div class="toc fade-in">
+            <h3>
+                <i data-lucide="list" style="width: 24px; height: 24px; color: var(--gold);"></i>
+                Quick Navigation
+            </h3>
+            <div class="toc-list">
+                <a href="#section1" class="toc-link"><span>1</span> Terms Ka Introduction</a>
+                <a href="#section2" class="toc-link"><span>2</span> Humari Services</a>
+                <a href="#section3" class="toc-link"><span>3</span> Booking & Payment</a>
+                <a href="#section4" class="toc-link"><span>4</span> Cancellation Policy</a>
+                <a href="#section5" class="toc-link"><span>5</span> Food Safety</a>
+                <a href="#section6" class="toc-link"><span>6</span> Customer Ki Zimmedari</a>
+                <a href="#section7" class="toc-link"><span>7</span> Liability Limits</a>
+                <a href="#section8" class="toc-link"><span>8</span> Intellectual Property</a>
+                <a href="#section9" class="toc-link"><span>9</span> Dispute Resolution</a>
+                <a href="#section10" class="toc-link"><span>10</span> Terms Mein Changes</a>
+            </div>
+        </div>
+
+        <!-- Section 1: Introduction -->
+        <section id="section1" class="terms-section fade-in">
+            <span class="terms-section-number">1</span>
+            <h2>
+                <i data-lucide="file-text" class="terms-icon"></i>
+                Terms Ka Introduction
+            </h2>
+            <p>
+                <strong>The Entire Caters</strong> ("hum", "humari", ya "Company") ki website aur catering 
+                services use karke aap in Terms of Service ("Terms") ko accept karte hain. Yeh Terms 
+                <strong>Lucknow, Uttar Pradesh</strong> mein operate hone wali humari sabhi services pe 
+                apply hote hain.
+            </p>
+            <p>
+                Agar aap in Terms se agree nahi karte, toh please humari services use na karein. 
+                Booking confirm karna matlab aap in sabhi Terms ko samajh kar accept kar rahe hain.
+            </p>
+            
+            <div class="important-notice">
+                <p><strong>Zaroori Baat:</strong> Yeh Terms samay samay pe update ho sakte hain. 
+                Latest version hamesha humari website pe available hoga. Major changes hone pe 
+                hum aapko inform karenge.</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Services Description -->
+        <section id="section2" class="terms-section fade-in">
+            <span class="terms-section-number">2</span>
+            <h2>
+                <i data-lucide="utensils-crossed" class="terms-icon"></i>
+                Humari Services
+            </h2>
+            <p>
+                <strong>The Entire Caters</strong> Lucknow mein premium catering services provide karta hai. 
+                Humari services mein shamil hain:
+            </p>
+            <ul>
+                <li><strong>Shaadi Catering:</strong> Haldi, Mehndi, Sangeet, Wedding, Reception - complete wedding solutions</li>
+                <li><strong>Party & Celebrations:</strong> Birthday, Anniversary, Kitty Party, House Warming events</li>
+                <li><strong>Corporate Events:</strong> Office parties, Conferences, Product launches, Client meetings</li>
+                <li><strong>Custom Menu Planning:</strong> Aapki pasand ke hisaab se personalized menu</li>
+                <li><strong>Live Counters:</strong> Chaat, Dosa, Tandoor, Chinese - fresh preparations</li>
+                <li><strong>Traditional Lucknowi Cuisine:</strong> Authentic nawabi khana with 30+ years expertise</li>
+            </ul>
+            <p>
+                Har service ka scope booking ke time clearly define kiya jayega. Koi additional requirement 
+                ho toh advance mein batana zaroori hai.
+            </p>
+        </section>
+
+        <!-- Section 3: Booking & Payment -->
+        <section id="section3" class="terms-section fade-in">
+            <span class="terms-section-number">3</span>
+            <h2>
+                <i data-lucide="credit-card" class="terms-icon"></i>
+                Booking & Payment Terms
+            </h2>
+            
+            <h3>Booking Process</h3>
+            <ul>
+                <li>Booking ke liye <span class="highlight">advance payment</span> zaroori hai</li>
+                <li>Final menu aur guest count booking ke time confirm hona chahiye</li>
+                <li>Booking confirmation written agreement ke baad hi valid hogi</li>
+                <li>Event se kam se kam <span class="highlight">7 din pehle</span> final confirmation zaroori</li>
+            </ul>
+
+            <h3>Payment Structure</h3>
+            <ul>
+                <li><strong>Advance Payment:</strong> Total amount ka 50% booking ke time</li>
+                <li><strong>Balance Payment:</strong> Baaki 50% event ke din ya ek din pehle</li>
+                <li>Large events ke liye installment options available hain</li>
+                <li>GST extra hai unless specifically mentioned otherwise</li>
+            </ul>
+
+            <h3>Accepted Payment Methods</h3>
+            <ul>
+                <li>Cash payment</li>
+                <li>Bank Transfer / NEFT / RTGS</li>
+                <li>UPI Payments (GPay, PhonePe, Paytm)</li>
+                <li>Cheque (subject to clearance before event)</li>
+            </ul>
+
+            <div class="important-notice">
+                <p><strong>Note:</strong> Bounced cheque ya failed payments pe additional charges lag sakte 
+                hain aur booking cancel ho sakti hai.</p>
+            </div>
+        </section>
+
+        <!-- Section 4: Cancellation Policy -->
+        <section id="section4" class="terms-section fade-in">
+            <span class="terms-section-number">4</span>
+            <h2>
+                <i data-lucide="calendar-x" class="terms-icon"></i>
+                Cancellation & Refund Policy
+            </h2>
+            <p>
+                Hum samajhte hain ki kabhi kabhi plans change ho jate hain. Isliye humari cancellation 
+                policy fair aur transparent hai:
+            </p>
+
+            <h3>Customer Cancellation</h3>
+            <ul>
+                <li><strong>30+ din pehle cancel:</strong> Full refund (minus 5% processing fee)</li>
+                <li><strong>15-30 din pehle cancel:</strong> 70% refund</li>
+                <li><strong>7-14 din pehle cancel:</strong> 50% refund</li>
+                <li><strong>7 din se kam:</strong> No refund (advance forfeit hoga)</li>
+            </ul>
+
+            <h3>Date Modification</h3>
+            <ul>
+                <li>Date change request kam se kam 15 din pehle karni hogi</li>
+                <li>New date availability pe depend karega</li>
+                <li>Ek baar free date change allowed, uske baad nominal charge lagega</li>
+            </ul>
+
+            <h3>Humari Taraf Se Cancellation</h3>
+            <p>
+                Agar kisi unforeseen circumstance (natural disaster, government restrictions, etc.) ki 
+                wajah se hum service provide nahi kar paate, toh <span class="highlight">full refund</span> 
+                diya jayega ya alternative date offer ki jayegi.
+            </p>
+        </section>
+
+        <!-- Section 5: Food Safety -->
+        <section id="section5" class="terms-section fade-in">
+            <span class="terms-section-number">5</span>
+            <h2>
+                <i data-lucide="shield-check" class="terms-icon"></i>
+                Food Safety & Hygiene
+            </h2>
+            <p>
+                Food safety humari top priority hai. Hum <strong>FSSAI guidelines</strong> follow karte hain 
+                aur highest hygiene standards maintain karte hain.
+            </p>
+
+            <h3>Humari Commitment</h3>
+            <ul>
+                <li>Fresh ingredients ka use - kabhi compromise nahi</li>
+                <li>FSSAI approved kitchen aur processes</li>
+                <li>Trained staff with proper hygiene training</li>
+                <li>Regular quality checks aur temperature monitoring</li>
+                <li>Clean uniforms, gloves, aur hair nets mandatory</li>
+            </ul>
+
+            <h3>Aapki Responsibility</h3>
+            <ul>
+                <li>Allergies ya dietary restrictions <span class="highlight">advance mein</span> batayein</li>
+                <li>Leftover food ka proper storage customer ki zimmedari hai</li>
+                <li>Event ke 2-3 ghante baad khana consume karna recommended nahi hai</li>
+            </ul>
+
+            <div class="important-notice">
+                <p><strong>Allergy Disclaimer:</strong> Humara kitchen multiple ingredients handle karta hai. 
+                Cross-contamination ka minor risk ho sakta hai. Severe allergies wale guests ke liye 
+                please humse pehle baat karein.</p>
+            </div>
+        </section>
+
+        <!-- Section 6: Customer Responsibilities -->
+        <section id="section6" class="terms-section fade-in">
+            <span class="terms-section-number">6</span>
+            <h2>
+                <i data-lucide="users" class="terms-icon"></i>
+                Customer Ki Zimmedari
+            </h2>
+            <p>
+                Successful event ke liye customer aur caterer dono ka cooperation zaroori hai. 
+                Aapki kuch responsibilities hain:
+            </p>
+
+            <h3>Event Details</h3>
+            <ul>
+                <li>Accurate guest count provide karein (±10% variance acceptable)</li>
+                <li>Venue address aur access details clearly batayein</li>
+                <li>Electricity, water, aur basic facilities venue pe available hon</li>
+                <li>Serving area / kitchen space ki arrangement customer karenge</li>
+            </ul>
+
+            <h3>Communication</h3>
+            <ul>
+                <li>Event coordinator ya contact person designate karein</li>
+                <li>Menu changes kam se kam 5 din pehle communicate karein</li>
+                <li>Any special requirements advance mein discuss karein</li>
+            </ul>
+
+            <h3>Venue Related</h3>
+            <ul>
+                <li>Venue access event se 3-4 ghante pehle available hona chahiye</li>
+                <li>Safe parking space for our vehicles</li>
+                <li>Venue rules aur restrictions humein batayein</li>
+            </ul>
+        </section>
+
+        <!-- Section 7: Liability Limitations -->
+        <section id="section7" class="terms-section fade-in">
+            <span class="terms-section-number">7</span>
+            <h2>
+                <i data-lucide="alert-triangle" class="terms-icon"></i>
+                Liability Ki Limits
+            </h2>
+            <p>
+                Hum apni services mein best quality dene ki koshish karte hain, lekin kuch situations 
+                mein humari liability limited hoti hai:
+            </p>
+
+            <h3>Hum Responsible Nahi Hain</h3>
+            <ul>
+                <li>Force majeure events (natural disasters, riots, government orders)</li>
+                <li>Venue ke electricity ya facility failure se hone wale issues</li>
+                <li>Customer ke guests dwara cause kiya gaya koi damage</li>
+                <li>Leftover food ke improper storage se hone wali problems</li>
+                <li>Undisclosed allergies ya medical conditions</li>
+            </ul>
+
+            <h3>Maximum Liability</h3>
+            <p>
+                Kisi bhi claim mein humari maximum liability <span class="highlight">paid amount tak</span> 
+                limited hogi. Consequential, indirect, ya special damages ke liye hum liable nahi hain.
+            </p>
+
+            <h3>Insurance</h3>
+            <p>
+                Hum professional liability insurance maintain karte hain. Major events ke liye separate 
+                event insurance recommend ki jaati hai.
+            </p>
+        </section>
+
+        <!-- Section 8: Intellectual Property -->
+        <section id="section8" class="terms-section fade-in">
+            <span class="terms-section-number">8</span>
+            <h2>
+                <i data-lucide="copyright" class="terms-icon"></i>
+                Intellectual Property
+            </h2>
+            <p>
+                <strong>The Entire Caters</strong> ka naam, logo, tagline ("Swaad Jo Dil Tak Pahunche"), 
+                aur website content humari intellectual property hai.
+            </p>
+
+            <h3>Aap Yeh Nahi Kar Sakte</h3>
+            <ul>
+                <li>Humara logo ya branding bina permission ke use karna</li>
+                <li>Humari website content copy ya reproduce karna</li>
+                <li>Humari recipes ya preparation methods commercially use karna</li>
+                <li>Humare naam se misleading representation karna</li>
+            </ul>
+
+            <h3>Photos & Media</h3>
+            <p>
+                Events mein li gayi photos ko promotional purposes ke liye use karne ka right hum 
+                rakhte hain, unless aap specifically object karein. Aapke event ki photos social 
+                media pe share karne se pehle aapki consent li jayegi.
+            </p>
+        </section>
+
+        <!-- Section 9: Dispute Resolution -->
+        <section id="section9" class="terms-section fade-in">
+            <span class="terms-section-number">9</span>
+            <h2>
+                <i data-lucide="scale" class="terms-icon"></i>
+                Dispute Resolution
+            </h2>
+            <p>
+                Hum chahte hain ki koi dispute na ho, lekin agar ho toh peaceful resolution humari 
+                priority hai.
+            </p>
+
+            <h3>Step 1: Direct Communication</h3>
+            <p>
+                Koi bhi complaint pehle humari team ko directly communicate karein. Hum 
+                <span class="highlight">48 ghante</span> mein respond karne ki koshish karenge.
+            </p>
+
+            <h3>Step 2: Mediation</h3>
+            <p>
+                Agar direct communication se resolve nahi hota, toh mutual consent se ek mediator 
+                appoint kar sakte hain.
+            </p>
+
+            <h3>Step 3: Legal Action</h3>
+            <p>
+                Final resort ke taur pe, disputes <strong>Lucknow courts</strong> ke jurisdiction mein 
+                resolve honge. Indian law applicable hogi.
+            </p>
+
+            <div class="important-notice">
+                <p><strong>Time Limit:</strong> Koi bhi claim event ke <span class="highlight">30 din ke 
+                andar</span> raise karna hoga. Uske baad claims accept nahi honge.</p>
+            </div>
+        </section>
+
+        <!-- Section 10: Changes to Terms -->
+        <section id="section10" class="terms-section fade-in">
+            <span class="terms-section-number">10</span>
+            <h2>
+                <i data-lucide="refresh-cw" class="terms-icon"></i>
+                Terms Mein Changes
+            </h2>
+            <p>
+                Hum in Terms ko samay samay pe update kar sakte hain:
+            </p>
+            <ul>
+                <li>Minor changes immediately effective honge</li>
+                <li>Major changes ke 15 din pehle notice diya jayega</li>
+                <li>Updated Terms website pe publish honge</li>
+                <li>Continued service use karna matlab aap new Terms accept karte hain</li>
+            </ul>
+            <p>
+                Hum recommend karte hain ki aap periodically yeh page check karein updated Terms ke liye.
+            </p>
+        </section>
+
+        <!-- Contact Box -->
+        <div class="contact-box fade-in">
+            <h3>Koi Sawaal Hai?</h3>
+            <p>
+                In Terms ke baare mein ya humari services ke baare mein koi bhi sawaal ho, 
+                toh humse zaroor sampark karein. Hum hamesha help ke liye ready hain!
+            </p>
+            <div class="contact-info-grid">
+                <div class="contact-info-item">
+                    <i data-lucide="phone"></i>
+                    <a href="tel:+919876543210">+91 98765 43210</a>
+                </div>
+                <div class="contact-info-item">
+                    <i data-lucide="mail"></i>
+                    <a href="mailto:info@theentirecaters.com">info@theentirecaters.com</a>
+                </div>
+                <div class="contact-info-item">
+                    <i data-lucide="map-pin"></i>
+                    <span>Lucknow, Uttar Pradesh</span>
+                </div>
+                <div class="contact-info-item">
+                    <i data-lucide="clock"></i>
+                    <span>Mon - Sun: 9 AM - 9 PM</span>
+                </div>
+            </div>
+            <a href="index.html#contact" class="btn-gold" style="margin-top: 24px;">
+                <i data-lucide="message-circle" style="width: 16px; height: 16px;"></i>
+                Humse Baat Karein
+            </a>
+        </div>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="footer-grid">
+            <!-- Brand -->
+            <div class="footer-brand">
+                <div class="nav-logo">
+                    <div class="nav-logo-icon" style="width: 56px; height: 56px;">
+                        <span style="font-size: 22px;">TEC</span>
+                    </div>
+                    <div class="nav-logo-text" style="display: block;">
+                        <div class="nav-logo-title" style="font-size: 24px;">The Entire Caters</div>
+                        <div class="nav-logo-subtitle">Premium Catering</div>
+                    </div>
+                </div>
+                <p>
+                    30+ saal ka anubhav, dil se bana khana, aur aapki khushi — 
+                    yahi hai humara mission. Lucknow ki sabse trusted catering service.
+                </p>
+                <!-- Social Icons -->
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <i data-lucide="facebook" style="width: 20px; height: 20px;"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <i data-lucide="instagram" style="width: 20px; height: 20px;"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <i data-lucide="twitter" style="width: 20px; height: 20px;"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <i data-lucide="youtube" style="width: 20px; height: 20px;"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html#about">Humari Kahani</a></li>
+                    <li><a href="index.html#services">Humari Services</a></li>
+                    <li><a href="index.html#cuisine">Menu Gallery</a></li>
+                    <li><a href="index.html#events">Events</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-contact">
+                <h4>Sampark Karein</h4>
+                <div class="footer-contact-item">
+                    <i data-lucide="map-pin"></i>
+                    <span>Lucknow, Uttar Pradesh<br>India</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i data-lucide="phone"></i>
+                    <a href="tel:+919876543210">+91 98765 43210</a>
+                </div>
+                <div class="footer-contact-item">
+                    <i data-lucide="mail"></i>
+                    <a href="mailto:info@theentirecaters.com">info@theentirecaters.com</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <p>© 2025 The Entire Caters. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="trmsrvc.html" class="active">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== BACK TO TOP BUTTON ========== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i data-lucide="arrow-up" style="width: 24px; height: 24px;"></i>
+    </button>
+
+    <!-- ========== JAVASCRIPT ========== -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const menuClose = document.getElementById('menuClose');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('active');
+            mobileOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('active');
+            mobileOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        menuToggle.addEventListener('click', openMobileMenu);
+        menuClose.addEventListener('click', closeMobileMenu);
+        mobileOverlay.addEventListener('click', closeMobileMenu);
+
+        // Close menu on link click
+        document.querySelectorAll('.mobile-menu-link').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const scrollProgress = document.getElementById('scrollProgress');
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            scrollProgress.style.width = scrollPercent + '%';
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Fade In Animation on Scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        fadeElements.forEach(el => fadeObserver.observe(el));
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 100;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
